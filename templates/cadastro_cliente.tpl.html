@@ -1,0 +1,92 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Cadastro de Clientes</h1>
+        </div>
+    </div>
+
+    <form>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteNome">Nome:</label>
+                    <input type="text" class="form-control" id="clienteNome">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteCPF">CPF:</label>
+                    <input type="text" class="form-control" id="clienteCPF">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteRG">RG:</label>
+                    <input type="text" class="form-control" id="clienteRG">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteNascimento">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="clienteNascimento">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteSexo">Sexo:</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Masculino</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Feminino</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteEndereço">Endereço:</label>
+                    <input type="text" class="form-control" id="clienteEndereço">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteTelefone">Telefone:</label>
+                    <input type="text" class="form-control" id="clienteTelefone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="clienteEmail">Email:</label>
+                    <input type="email" class="form-control" id="clienteEmail">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <button class="btn">Salvar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{'active' : petTabSelected == 'myPets'}" ng-click="petTabSelected = 'myPets'"><a>Meus Pets</a></li>
+                    <li ng-class="{'active' : petTabSelected == 'findPets'}" ng-click="petTabSelected = 'findPets'"><a>Encontrar Pets</a></li>
+                </ul>
+            </div>
+            <div class="row" ng-if="petTabSelected == 'myPets'">
+                <ul class="list-group">
+                    <li class="list-group-item">Joel</li>
+                </ul>
+                <button class="btn">Novo pet</button>
+            </div>
+            <div class="row" ng-if="petTabSelected == 'findPets'">
+                <div class="inner-addon right-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="text" class="form-control pet-list-search" placeholder="Buscar" ng-model="petSearch"/>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="pet in mockedPetList | filter: petSearch">{{pet}}<button class="btn btn-xs btn-primary pull-right">Adicionar</button></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
