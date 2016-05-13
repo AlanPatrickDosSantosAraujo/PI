@@ -74,6 +74,16 @@ body{
     display: inline-block;
 }
 
+.calendar {
+    border-width:0;
+    width: 100%;
+    height: 600px;
+}
+
+.footer-size {
+    height: 51px;
+}
+
 @media screen and (max-width: 768px) {
 
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
