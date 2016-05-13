@@ -69,3 +69,42 @@ body{
 .list-spacer {
     margin-top: 10px;
 }
+
+.nav > li {
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        background-color: aliceblue;
+        z-index: 1;
+        position: relative;
+    }
+
+    .navbar-left-menu {
+        padding-top: 0;
+    }
+
+    .navbar-brand {
+        height: 70px;
+    }
+
+    .container-fluid {
+        height:75px;
+    }
+
+    .navbar-default {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .header-size {
+        height:75px;
+    }
+}
+.navbar-default .navbar-nav > li > a {
+    font-weight: bold;
+}
