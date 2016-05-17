@@ -1,7 +1,10 @@
 angular.module('petshopApp', ['ngRoute', 'templateDirectives'])
 
 .config(function($routeProvider, $locationProvider) {
-  $routeProvider
+  $routeProvider.when('/login', {
+      templateUrl: 'templates/login.tpl.html',
+      controller: 'LoginCtrl'
+  })
   .when('/Agenda', {
     templateUrl: 'templates/agenda.tpl.html',
     controller: 'AgendaCtrl',
